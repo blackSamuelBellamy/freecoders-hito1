@@ -12,15 +12,15 @@ const Busqueda = () => {
             <Filtrador />
             <div className="codersWrap">
                 <div className="coderContainer">
-                    {programadores.map((coders, index) => 
+                    {freeCoders.map((coders, index) => 
                         <div className="coderBoxCards" key={index}>
                             <div className="single-box">
                                 <div className="coderBox-content">
-                                    <img className="sides side-1" src={coders.foto_url} alt={coders.id} />
+                                    <img className="sides side-1" src={coders.url} alt={coders.id} />
                                     <div className="sides side-2">
                                         <div className="contentCoders">
-                                            <h2>{`${coders.nombre} ${coders.apellido}`}</h2>
-                                            <p>{coders.oferta_valor}</p>
+                                            <h2>{`${coders.nombre}`}</h2>
+                                            <p>{coders.descripcion}</p>
                                             <div className='socials'>
                                                 <AiFillGithub className='icons' />
                                                 <AiFillLinkedin className='icons' />

@@ -1,5 +1,6 @@
 import { useState, createContext, useEffect } from "react"
 import axios from "axios"
+import Coders from '../coders.json'
 
 
 export const DataContext = createContext()
