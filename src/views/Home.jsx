@@ -1,4 +1,3 @@
-
 import { useContext} from 'react'
 import Spline from '@splinetool/react-spline'
 import Typewriter from 'typewriter-effect'
@@ -19,7 +18,7 @@ export default function Home() {
           <Typewriter
             options={{
               strings: ['Coders destacados!',
-                'Podrás encontar desarrolladores Front-end, Back-end y Full-stack...',
+                'Podrás encontrar desarrolladores Front-end, Back-end y Full-stack...',
                 'Ve al navbar para comenzar a buscar a nuestros profesionales!'],
               autoStart: true,
               loop: true,

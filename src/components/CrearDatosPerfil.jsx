@@ -1,18 +1,24 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Form, Button } from "react-bootstrap";
 import RangeSlider from "react-bootstrap-range-slider";
 //import '../assets/css/estilocrearperfil.css';
 
 export default function CrearDatosPerfil() {
+  const mainForm = useRef(null)
   const [rate, setRate] = useState(10000);
 
   const handleRateChange = (event) => {
     setRate(event.target.value);
   };
 
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(mainForm.current)
+  }
+
   return (
-    <Form>
+    <Form ref={mainForm} onSubmit={handleSubmit}>
       <div className="maincontainer">
         <h2>Ingresa tus datos para crear tu perfil</h2>
       </div>
@@ -20,7 +26,7 @@ export default function CrearDatosPerfil() {
       <div className="maincontainer">
         <Form.Group controlId="formName">
           <Form.Label>Nombre</Form.Label>
-          <Form.Control type="text" placeholder="Agregar nombre" />
+          <Form.Control type="text" placeholder="Agregar nombre" name="nombre" />
         </Form.Group>
 
         <Form.Group controlId="formLastName">
